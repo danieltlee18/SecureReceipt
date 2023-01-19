@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <main>
+            <h1>My Receipts</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Vendor</th>
+                        <th>Total</th>
+                        <th>Tax</th>
+                        <th>Date</th>
+                        <th>Category</th>
+                        <th>Account</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for receipt in receipts %}
+                        <tr>
+                            <td>{{ receipt.vendor }}</td>
+                            <td>{{ receipt.total }}</td>
+                            <td>{{ receipt.tax }}</td>
+                            <td>{{ receipt.date|date:"m/d/YY" }}</td>
+                            <td>{{ receipt.category.name }}</td>
+                            <td>{{ receipt.account.name }}</td>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </main>
+    </body>
+</html>
