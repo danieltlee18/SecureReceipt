@@ -1,5 +1,4 @@
 # SecureReceipt
-# SecureReceipt App
 
 The SecureReceipt app is a user account and receipt tracking software with enhanced security measures.
 
